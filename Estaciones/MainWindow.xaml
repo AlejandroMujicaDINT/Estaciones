@@ -9,16 +9,13 @@
         Height="450"
         Width="800"
         Icon="32.ico">
-    <UniformGrid Rows="3"
-                 Columns="2"
-                 FirstColumn="1"
-                 Background="Aquamarine">
-        <TextBlock FontWeight="Bold"
+    <DockPanel Background="Aquamarine">
+        <TextBlock DockPanel.Dock="Top" 
+                   FontWeight="Bold"
                    FontStyle="Italic"
                    FontSize="36"
                    HorizontalAlignment="Center"
-                   TextAlignment="Center"
-                   Margin="63,5,62,82">
+                   TextAlignment="Center">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1"
                                      StartPoint="0.5,0">
@@ -30,8 +27,12 @@
             </TextBlock.Foreground>
             <TextBlock.Effect>
                 <DropShadowEffect />
-            </TextBlock.Effect><Run Text="Las 4 estaciones" /></TextBlock>
-        <ScrollViewer Margin="10"
+            </TextBlock.Effect>
+            <Run Text="Las 4 estaciones" />
+            </TextBlock>
+        <UniformGrid Rows="2"
+                     Columns="2">
+            <ScrollViewer Margin="10"
                       HorizontalScrollBarVisibility="Auto">
             <Image Source="images/invierno.jpg" />
         </ScrollViewer>
@@ -48,4 +49,5 @@
             <Image Source="images/otoño.jpg" />
         </ScrollViewer>
     </UniformGrid>
+    </DockPanel>
 </Window>
